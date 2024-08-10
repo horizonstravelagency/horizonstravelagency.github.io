@@ -1,0 +1,57 @@
+/*aplicando um background no header*/
+#header-bg {
+  background-color: var(--cor-01) !important;
+}
+header .logo-horizons a {
+  font-family: "starz-2016";
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: var(--cor-00) !important;
+}
+/*alteração da cor do botão do nav*/
+header .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+/*definida cor do backgroud do nav*/
+#nav-bg {
+  background-color: var(--cor-01) !important;
+}
+/*cor dos links do nav e texto com letras maiusculas*/
+header ul li a {
+  color: var(--cor-00) !important;
+  text-transform: uppercase;
+}
+header ul li a::after {
+  content: " ";
+  width: 0%;
+  height: 4px;
+  background-color: var(--cor-00) !important;
+  display: block;
+}
+header ul li a:hover::after {
+  width: 100%;
+  transition: 0.4s;
+}
+/*aplicando underline nos links do nav*/
+
+@media (max-width: 990px) {
+  header ul li a::after {
+    display: none;
+  }
+  header ul li a{
+    display: inline-block !important;
+    padding: 10px !important;
+    border-radius:5px;
+  }
+  header ul li a:hover{
+    background-color: var(--cor-03);
+  }
+}
+@media (max-width: 650px) {
+  header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+  }
+}
